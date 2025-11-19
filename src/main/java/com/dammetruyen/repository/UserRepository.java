@@ -1,5 +1,8 @@
 package com.dammetruyen.repository;
 
-public class UserRepository {
-    
+import com.dammetruyen.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, String> {
+    User findByAccount(String account);
 }
